@@ -65,11 +65,12 @@ struct SmartAndoverApp: App {
                     .frame(height: 50)
                     .padding(.horizontal)
                     
-//                    .background(Color.themeDark.ignoresSafeArea())
-                    
                     ZStack {
                         
                         MasterView(selectedTab: $currentPage)
+                            .onAppear {
+                                currentPage = .home
+                            }
                         
                     }
                         
